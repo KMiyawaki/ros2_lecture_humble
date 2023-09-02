@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ros2_lecture_humble:
+    container_name: ros2_lecture_humble
+    image: kmiyawaki20/ros2_humble_lxde:202309
+    volumes:
+      - ubuntu:/home/ubuntu
+    ports:
+      - "6080:80"
+      - "5901:5901"
+    environment:
+      - USER=ubuntu
+      - RESOLUTION=1280x800
+      - TZ=Asia/Tokyo
+    tty: true
+
+volumes:
+  ubuntu:

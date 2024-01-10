@@ -1,4 +1,4 @@
-# ros2_lecture_humble-202309
+# ros2_lecture_humble-202401
 
 ## 必要なソフトのインストール
 
@@ -16,7 +16,7 @@
 
 Wifi通信の良好な環境にて実施してください。
 
-[ros2_lecture_humble-202309.zip](https://github.com/KMiyawaki/ros2_lecture_humble/archive/refs/tags/202309.zip)をダウンロードし展開してください。ここでは`%USERPROFILE%\Documents\ros2_lecture_humble-202309`に展開したとします。
+[ros2_lecture_humble-202401.zip](https://github.com/KMiyawaki/ros2_lecture_humble/archive/refs/tags/202401.zip)をダウンロードし展開してください。ここでは`%USERPROFILE%\Documents\ros2_lecture_humble-202401`に展開したとします。
 
 なお、`%USERPROFILE%`は`Windows`の環境変数で`C:\Users\[ログインユーザ名]`に置き換えられます。  
 `Windows`のファイルエクスプローラーでアドレス欄に`%USERPROFILE%\Documents`と入力してエンターキーを押し、どのフォルダが開くかを確認してみてください。
@@ -43,7 +43,7 @@ Wifi通信の良好な環境にて実施してください。
 なお、ファイルパスの`\`バックスラッシュは![2022-12-11_102434.png](./images/yen.png)（円マーク）を意味しています。
 
 ```cmd
-cd %USERPROFILE%\Documents\ros2_lecture_humble-202309
+cd %USERPROFILE%\Documents\ros2_lecture_humble-202401
 docker-compose pull
 ```
 
@@ -57,12 +57,12 @@ docker-compose pull
 docker images
 ```
 
-次のように`REPOSITORY`に`ros2_humble_lxde`、`TAG`に`202309`のイメージがダウンロードされていれば成功です。  
+次のように`REPOSITORY`に`ros2_humble_lxde`、`TAG`に`202401`のイメージがダウンロードされていれば成功です。  
 `9612864073fc   24 minutes ago   3.77GB`の部分は多少異なる可能性があります。
 
 ```cmd
 REPOSITORY                     TAG               IMAGE ID       CREATED        SIZE
-kmiyawaki20/ros2_humble_lxde   202309            9612864073fc   24 minutes ago   3.77GB
+kmiyawaki20/ros2_humble_lxde   202401            9612864073fc   24 minutes ago   3.77GB
 ```
 
 ## 起動
@@ -76,7 +76,7 @@ kmiyawaki20/ros2_humble_lxde   202309            9612864073fc   24 minutes ago  
 `Docker Desktop for Windows`の起動を確認できたら、次のコマンドを入力してください。
 
 ```cmd
-cd %USERPROFILE%\Documents\ros2_lecture_humble-202309
+cd %USERPROFILE%\Documents\ros2_lecture_humble-202401
 docker-compose up
 ```
 
@@ -205,10 +205,10 @@ rqt_graph
 
 ## VSCodeとの連携
 
-`Windows`のコマンドプロンプトを起動し、次のコマンドを入力してください。`ros2_lecture_humble-202309`フォルダが`VSCode`で開かれるはずです。
+`Windows`のコマンドプロンプトを起動し、次のコマンドを入力してください。`ros2_lecture_humble-202401`フォルダが`VSCode`で開かれるはずです。
 
 ```cmd
-cd %USERPROFILE%\Documents\ros2_lecture_humble-202309
+cd %USERPROFILE%\Documents\ros2_lecture_humble-202401
 code . # ドットをつけてください。
 ```
 
@@ -309,7 +309,7 @@ WEBブラウザのときと同じように`Linux`のデスクトップにアク�
 
 ```bat
 start "ros2_lecture_humble" ^
-/d %USERPROFILE%\Documents\ros2_lecture_humble-202309 ^
+/d %USERPROFILE%\Documents\ros2_lecture_humble-202401 ^
 docker-compose up
 ```
 

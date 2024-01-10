@@ -2,7 +2,7 @@ version: '3'
 services:
   ros2_lecture_humble:
     container_name: ros2_lecture_humble
-    image: kmiyawaki20/ros2_humble_lxde:202309
+    image: kmiyawaki20/ros2_humble_lxde:202401
     volumes:
       - ubuntu:/home/ubuntu
     ports:

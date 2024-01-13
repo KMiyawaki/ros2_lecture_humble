@@ -22,7 +22,7 @@
 下記のソフトをインストールしてください。
 
 1. [`Docker Desktop for Windows`](https://www.docker.com/products/docker-desktop/)
-    - インターネット上に[日本語でのインストール方法](https://docs.docker.jp/docker-for-windows/install.html)についても解説があります。
+    - インターネット上に[インストール方法の日本語解説](https://docs.docker.jp/docker-for-windows/install.html)もあります。
     - `WSL2(Windows Subsystem for Linux 2)`を併用する方法でインストールしてください。
 2. `Visual Studio Code`
     - 以降、VSCodeと表記します。
@@ -66,7 +66,7 @@ docker-compose pull
 
 以下の画面のように環境のダウンロードが始まります。
 
-![2023-09-14_161647.png](./images/2023-09-14_161647.png)
+![2024-01-13_132149.png](./images/2024-01-13_132149.png)
 
 終了したら次のコマンドを入力してください。
 
@@ -102,12 +102,11 @@ docker-compose up
 このコマンドを起動したターミナルは作業終了までは閉じないでください。
 
 ```cmd
-[+] Building 0.0s (0/0)
-・・・
+・・・省略・・・
 Attaching to ros2_lecture_humble
 ros2_lecture_humble  |
-ros2_lecture_humble  | New Xtigervnc server 'dbfd199a41a8:1 (ubuntu)' on port 5901 for display :1.
-ros2_lecture_humble  | Use xtigervncviewer -SecurityTypes None,TLSNone dbfd199a41a8:1 to connect to the VNC server.    
+ros2_lecture_humble  | New Xtigervnc server 'b4a97ab7c7a0:1 (ubuntu)' on port 5901 for display :1.
+ros2_lecture_humble  | Use xtigervncviewer -SecurityTypes None,TLSNone b4a97ab7c7a0:1 to connect to the VNC server.
 ros2_lecture_humble  |
 ros2_lecture_humble  | WebSocket server settings:
 ros2_lecture_humble  |   - Listen on :80
@@ -160,7 +159,7 @@ WEBブラウザで表示されている`Linux`の`GUI`（以降単に`Linux`と�
 
 ![2024-01-12_115725.png](./images/2024-01-12_115725.png)
 
-`System Tools`->`LXTerminal`をクリックして、もう一つコマンドターミナルを開き、次のコマンドを実行してください。
+次のコマンドを実行してください。
 
 ```shell
 ros2 run turtlesim turtlesim_node
@@ -184,7 +183,7 @@ ros2 run turtlesim turtlesim_node
 
 ### talkerとlistener
 
-画面左下のアイコンをクリックし、`System Tools`->`LXTerminal`をクリックして、新しいコマンドターミナルを起動し、次のコマンドを実行してください。
+次のコマンドを実行してください。
 
 ```shell
 ros2 run py_pubsub talker
@@ -195,7 +194,7 @@ ros2 run py_pubsub talker
 ・・・
 ```
 
-もう一つコマンドターミナルを起動し次のコマンドを実行してください。
+画面左下のアイコンをクリックし、`System Tools`->`LXTerminal`をクリックして、新しいコマンドターミナルを起動し、次のコマンドを実行してください。
 
 ```shell
 ros2 run py_pubsub listener
@@ -222,7 +221,7 @@ rqt_graph
 
 ### ロボットシミュレータ
 
-前項と同じ要領で`LXTerminal`を起動し、次のコマンドを入力してください。
+次のコマンドを入力してください。
 
 ```shell
 ros2 launch oit_minibot_light_01_ros2 stage_teleop.launch.py teleop:=mouse
@@ -236,11 +235,11 @@ ros2 launch oit_minibot_light_01_ros2 stage_teleop.launch.py teleop:=mouse
 
 ## VSCodeとの連携
 
-`Windows`のコマンドプロンプトを起動し、次のコマンドを入力してください。`ros2_lecture_humble-202401`フォルダが`VSCode`で開かれるはずです。
+`Windows`のコマンドプロンプト（`Linux`ではありません）を起動し、次のコマンドを入力してください。`ros2_lecture_humble-202401`フォルダが`VSCode`で開かれるはずです。
 
 ```cmd
 cd %USERPROFILE%\Documents\ros2_lecture_humble-202401
-code . # ドットをつけてください。
+code . # 「code」に続けて半角スペースとドットを入力し、実行してください。
 ```
 
 補足説明：`VSCode`は通常、前回起動時に開いていたフォルダを記憶しており、普通に再起動するとそのフォルダを開こうとします。  
@@ -301,7 +300,8 @@ export DISPLAY=:1 # 新しいターミナルを開くごとにこのコマンド
 rqt_graph
 ```
 
-シミュレータもこの方法で起動できますので、一度試してみてください。
+[http://127.0.0.1:6080/vnc.html](http://127.0.0.1:6080/vnc.html)に接続したWEBブラウザ上の`Linux`に`rqt_graph`の画面が表示されるはずです。  
+シミュレータもこの方法で`VSCode`から起動できますので、一度試してみてください。
 
 基本的な開発の流れとしては次のようになります。
 

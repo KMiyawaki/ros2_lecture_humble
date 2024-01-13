@@ -1,16 +1,33 @@
-# ros2_lecture_humble-202401
+# ROS2プログラミング開発環境
+
+このページでは[大阪インテリジェントロボティクス株式会社](https://www.osakarobo.co.jp/)が開催する`ROS2`セミナーで使用する開発環境のインストール方法をご案内しています。
+
+本開発環境で使用しているソフトウェアは世間一般で広く利用されているものです。また、構築した環境も担当講師が実際に動作確認してはいますが、残念ながら全てのPCにおいて安全な動作を保証することはできません。  
+掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。不安がある場合は重要なファイル等のバックアップをされた上で実施されることをお勧めいたします。
+
+- [ROS2プログラミング開発環境](#ros2プログラミング開発環境)
+  - [必要なソフトのインストール](#必要なソフトのインストール)
+  - [Docker イメージのインストール](#docker-イメージのインストール)
+  - [起動](#起動)
+  - [終了](#終了)
+  - [ROS2の動作確認](#ros2の動作確認)
+    - [コマンドターミナルの起動とTurtlesim](#コマンドターミナルの起動とturtlesim)
+    - [talkerとlistener](#talkerとlistener)
+    - [ロボットシミュレータ](#ロボットシミュレータ)
+  - [VSCodeとの連携](#vscodeとの連携)
+  - [VNCクライアントの利用（オプション）](#vncクライアントの利用オプション)
 
 ## 必要なソフトのインストール
 
 下記のソフトをインストールしてください。
 
 1. [`Docker Desktop for Windows`](https://www.docker.com/products/docker-desktop/)
-  - インターネット上に[日本語でのインストール方法](https://docs.docker.jp/docker-for-windows/install.html)についても解説があります。
-  - `WSL2(Windows Subsystem for Linux 2)`を併用する方法でインストールしてください。
+    - インターネット上に[日本語でのインストール方法](https://docs.docker.jp/docker-for-windows/install.html)についても解説があります。
+    - `WSL2(Windows Subsystem for Linux 2)`を併用する方法でインストールしてください。
 2. `Visual Studio Code`
-  - 以降、VSCodeと表記します。
+    - 以降、VSCodeと表記します。
 3. `WEB`ブラウザ
-  - 種類は任意ですが、本ページでは`Chrome`を前提にご説明します。
+    - 種類は任意ですが、本ページでは`Chrome`を前提にご説明します。
 
 ## Docker イメージのインストール
 
@@ -323,17 +340,3 @@ WEBブラウザのときと同じように`Linux`のデスクトップにアク�
 ![2022-12-22_161431.png](./images/2022-12-22_161431.png)
 
 設定後、`127.0.0.1:5901`の接続先アイコンをダブルクリックして再接続してください。
-
-## 起動用バッチファイル（オプション）
-
-次のようなバッチファイルを`ros2_lecture_humble.bat`（ファイル名は任意です）としてデスクトップ等、分かりやすい場所に保存してください。
-
-```bat
-start "ros2_lecture_humble" ^
-/d %USERPROFILE%\Documents\ros2_lecture_humble-202401 ^
-docker-compose up
-```
-
-[Docker イメージのインストール](#docker-イメージのインストール)で説明したように、[Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/)が**起動していることを必ず確認してください**。
-
-その後、`ros2_lecture_humble.bat`をダブルクリックすると開発環境が起動します。
